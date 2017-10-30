@@ -69,6 +69,10 @@ RUN sleep 1 && \
     go-wrapper install && \
     go build -o /server server.go && \
     go get github.com/fission/fission && \
+    go get k8s.io/apimachinery/pkg/api/errors && \
+    go get k8s.io/apimachinery/pkg/apis/meta/v1 && \
+    go get k8s.io/client-go/kubernetes &&\
+    go get k8s.io/client-go/rest && \
     npm install -g newman && \
     npm cache clean --force && \
     rm -rf /root/.cache && \

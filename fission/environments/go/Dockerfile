@@ -7,8 +7,12 @@ ADD context	    ${APP}/context
 ADD server.go   ${APP}
 
 WORKDIR ${APP}
-RUN go get
-RUN go build -o /server server.go
+RUN go get && \
+	go get k8s.io/apimachinery/pkg/api/errors && \
+	go get k8s.io/apimachinery/pkg/apis/meta/v1 && \
+	go get k8s.io/client-go/kubernetes && \
+	go get k8s.io/client-go/rest && \
+	go build -o /server server.go
 
 ENTRYPOINT ["/server"]
 EXPOSE 8888
