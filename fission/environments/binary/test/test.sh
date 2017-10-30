@@ -15,7 +15,7 @@ find /userfunc -maxdepth 1 -name "*.go" -exec go build -buildmode=plugin -o /use
 
 /server &
 
-sleep 1
+sleep 5
 
 # First we need to perform the Specialize Option
 curl -sL -XPOST http://localhost:8888/specialize && {

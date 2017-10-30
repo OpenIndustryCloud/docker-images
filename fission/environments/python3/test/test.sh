@@ -15,7 +15,7 @@ find /userfunc -maxdepth 1 -name "*.py" -exec ln -sf "{}" /userfunc/user \;
 
 python3 /app/server.py &
 
-sleep 2
+sleep 5
 
 # First we need to perform the Specialize Option
 curl -sL -XPOST http://localhost:8888/specialize && {
