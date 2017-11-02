@@ -10,7 +10,7 @@ RUN apk update && \
 		bash && \
 	rm -rf /var/cache/apk/* && \
 	curl -Lo fission https://github.com/fission/fission/releases/download/v${RELEASE}/fission-cli-linux && \
-	chmod +x fission && \
-	mv fission /usr/local/bin/
+	chmod +x fission-cli-linux && \
+	mv fission /usr/local/bin/fission
 
 ENTRYPOINT [ "fission" ]
