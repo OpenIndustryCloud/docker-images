@@ -8,7 +8,6 @@ ADD server.go   ${APP}
 
 WORKDIR ${APP}
 RUN go get && \
-	go get k8s.io/apimachinery/pkg/api/errors && \
 	go get k8s.io/apimachinery/pkg/apis/meta/v1 && \
 	go get k8s.io/client-go/kubernetes && \
 	go get k8s.io/client-go/rest && \
