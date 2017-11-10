@@ -7,7 +7,9 @@ ENV FISSION_URL=4.3.2.1
 RUN apk update && \
 	apk add --no-cache \
 		curl \
-		bash && \
+		bash \
+		jq \
+		&& \
 	rm -rf /var/cache/apk/* && \
 	curl -L -o fission https://github.com/fission/fission/releases/download/${RELEASE}/fission-cli-linux && \
 	chmod +x fission && \
