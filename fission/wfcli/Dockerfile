@@ -1,4 +1,13 @@
-FROM golang:1.9.1-alpine
+FROM golang:1.8-alpine
+
+RUN apk update && \
+	apk add --no-cache \
+		curl \
+		bash \
+		jq \
+		sed \
+		&& \
+	rm -rf /var/cache/apk/* 
 
 WORKDIR /go/bin
 COPY wfcli .
