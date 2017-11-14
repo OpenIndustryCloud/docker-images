@@ -11,6 +11,7 @@ RUN go get && \
 	go get k8s.io/apimachinery/pkg/apis/meta/v1 && \
 	go get k8s.io/client-go/kubernetes && \
 	go get k8s.io/client-go/rest && \
+	go get cloud.google.com/go/storage && \
 	go build -o /server server.go
 
 ENTRYPOINT ["/server"]
