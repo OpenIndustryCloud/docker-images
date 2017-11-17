@@ -5,6 +5,7 @@ FROM node:8-alpine
 
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
+ENV GOOGLE_APPLICATION_CREDENTIALS=/etc/fission/google-credentials.conf
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

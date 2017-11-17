@@ -2,6 +2,7 @@ FROM golang:1.8-alpine
 
 ENV GOOS=linux 
 ENV GOARCH=386
+ENV GOOGLE_APPLICATION_CREDENTIALS=/etc/fission/google-credentials.conf
 
 RUN apk update && \
 	apk add coreutils \

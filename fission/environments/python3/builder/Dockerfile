@@ -1,4 +1,6 @@
-FROM alpine:3.5
+FROM alpine:3.6
+
+ENV GOOGLE_APPLICATION_CREDENTIALS=/etc/fission/google-credentials.conf
 
 RUN apk update
 RUN apk add --no-cache python3 python3-dev build-base
