@@ -2,7 +2,7 @@ FROM golang:1.8.1
 
 ENV GOPATH /usr
 ENV APP	   ${GOPATH}/src/github.com/fission/fission/environments/go
-ENV GOOGLE_APPLICATION_CREDENTIALS=/etc/fission/google-credentials.conf
+ENV GOOGLE_APPLICATION_CREDENTIALS=/tmp/google-credentials.conf
 
 ADD context	    ${APP}/context
 ADD server.go   ${APP}

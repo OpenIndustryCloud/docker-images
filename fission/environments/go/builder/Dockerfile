@@ -1,7 +1,7 @@
 FROM golang:1.8.1
 
 ENV GOPATH /usr
-ENV GOOGLE_APPLICATION_CREDENTIALS=/etc/fission/google-credentials.conf
+ENV GOOGLE_APPLICATION_CREDENTIALS=/tmp/google-credentials.conf
 
 
 RUN go get github.com/fission/fission && \
