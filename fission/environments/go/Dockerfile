@@ -13,6 +13,7 @@ RUN go get && \
 	go get k8s.io/client-go/kubernetes && \
 	go get k8s.io/client-go/rest && \
 	go get cloud.google.com/go/storage && \
+	go get github.com/mediocregopher/radix.v2/redis && \
 	go build -o /server server.go
 
 ENTRYPOINT ["/server"]
