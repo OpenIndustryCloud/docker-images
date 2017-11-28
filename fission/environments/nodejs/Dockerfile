@@ -13,7 +13,10 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 
 RUN apk update && \
-	apk add --no-cache libc6-compat && \
+	apk add --no-cache \
+		libc6-compat make gcc g++ \
+		python py-pip python-dev && \
+	npm install node-gyp rebuild && \
 	npm install && \
 	npm cache clean --force 
 COPY server.js /usr/src/app/server.js
