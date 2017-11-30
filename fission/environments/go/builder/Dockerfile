@@ -9,4 +9,5 @@ RUN go get github.com/fission/fission && \
 	go get k8s.io/client-go/kubernetes  && \
 	go get k8s.io/client-go/rest && \
 	go get cloud.google.com/go/storage && \
-	go get github.com/mediocregopher/radix.v2/redis
+	go get github.com/mediocregopher/radix.v2/redis && \
+	go get github.com/rubyphunk/goamz/aws
